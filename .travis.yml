@@ -12,7 +12,7 @@ script:
 after_success:
   - docker build -t dariusz151/multi-client ./client
   - docker build -t dariusz151/multi-nginx ./nginx
-  - docked build -t dariusz151/multi-server ./server
+  - docker build -t dariusz151/multi-server ./server
   - docker build -t dariusz151/multi-worker ./worker
     #login do docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
